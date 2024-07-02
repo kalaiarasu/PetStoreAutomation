@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-02T14:07:02 IST" name="FHIRAPISuite" finished-at="2024-07-02T14:07:13 IST" duration-ms="11044">
+    <groups>
+    </groups>
+    <test started-at="2024-07-02T14:07:02 IST" name="AllergyTest" finished-at="2024-07-02T14:07:13 IST" duration-ms="11044">
+      <class name="api.test.UserTests">
+        <test-method is-config="true" signature="setupData()[pri:0, instance:api.test.UserTests@7526515b]" started-at="2024-07-02T14:07:02 IST" name="setupData" finished-at="2024-07-02T14:07:03 IST" duration-ms="859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupData -->
+        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTests@7526515b]" started-at="2024-07-02T14:07:03 IST" name="testPostUser" finished-at="2024-07-02T14:07:07 IST" duration-ms="3554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPostUser -->
+        <test-method signature="testGetUserByName()[pri:3, instance:api.test.UserTests@7526515b]" started-at="2024-07-02T14:07:07 IST" name="testGetUserByName" finished-at="2024-07-02T14:07:08 IST" duration-ms="1612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUserByName -->
+        <test-method signature="testUpdateUserByName()[pri:4, instance:api.test.UserTests@7526515b]" started-at="2024-07-02T14:07:08 IST" name="testUpdateUserByName" finished-at="2024-07-02T14:07:11 IST" duration-ms="2976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUserByName -->
+        <test-method signature="testdeleteUserByName()[pri:5, instance:api.test.UserTests@7526515b]" started-at="2024-07-02T14:07:11 IST" name="testdeleteUserByName" finished-at="2024-07-02T14:07:13 IST" duration-ms="1691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testdeleteUserByName -->
+      </class> <!-- api.test.UserTests -->
+      <class name="api.test.Allergy_Test">
+        <test-method signature="testGetPatientIDFromDB()[pri:2, instance:api.test.Allergy_Test@2e8c1c9b]" started-at="2024-07-02T14:07:13 IST" name="testGetPatientIDFromDB" finished-at="2024-07-02T14:07:13 IST" duration-ms="4" status="FAIL">
+          <exception class="java.lang.ClassNotFoundException">
+            <message>
+              <![CDATA[com.mysql.cj.jdbc.Driver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ClassNotFoundException: com.mysql.cj.jdbc.Driver
+at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+at java.base/java.lang.Class.forName0(Native Method)
+at java.base/java.lang.Class.forName(Class.java:315)
+at api.utilities.DatabaseUtils.getDataFromDatabase(DatabaseUtils.java:15)
+at api.test.Allergy_Test.testGetPatientIDFromDB(Allergy_Test.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ClassNotFoundException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPatientIDFromDB -->
+      </class> <!-- api.test.Allergy_Test -->
+    </test> <!-- AllergyTest -->
+  </suite> <!-- FHIRAPISuite -->
+</testng-results>
